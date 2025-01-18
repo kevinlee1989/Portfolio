@@ -34,7 +34,7 @@ const projects = [
     ],
     image: "/backend.png",
     live: "",
-    github: "",
+    github: "https://github.com/kevinlee1989/Ticket",
   },
   {
     num: "02",
@@ -44,7 +44,7 @@ const projects = [
     stack: [{ name: "Python" }, { name: "numpy" }, { name: "Scikit-learn" }, { name: "TMBD API" },],
     image: "/AIMoviePic.png",
     live: "",
-    github: "",
+    github: "https://github.com/kevinlee1989/AiMovieRec",
   },
   {
     num: "03",
@@ -54,7 +54,7 @@ const projects = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/frontend.png",
     live: "",
-    github: "",
+    github: "https://github.com/kevinlee1989/DrugHelpPage",
   },
   {
     num: "04",
@@ -64,7 +64,7 @@ const projects = [
     stack: [{ name: "Java" }, { name: "node.js" }, { name: "Firebase" } , { name: "Express.js" }, { name: "WebSocket" }],
     image: "/LikeLion.png",
     live: "",
-    github: "",
+    github: "https://github.com/KingMedieval/Fall24LikeLion",
   },
 ];
 const Work = () => {
