@@ -191,7 +191,7 @@ const Work = () => {
                     <div className="relative w-full h-full">
                       {project.media.type === "video" ? (
                         <video
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                           src={project.media.src}
                           poster={project.media.poster}    // 선택
                           muted
@@ -214,7 +214,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
-              
+
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
