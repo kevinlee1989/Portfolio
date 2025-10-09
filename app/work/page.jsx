@@ -37,7 +37,7 @@ const projects = [
       src: "/GYB_video.mp4",  // /public 경로
       poster: "/GYB_Main.png"
     },
-    live: "",
+    live: "https://ai.mrgyb.com/",
     github: "https://github.com/kevinlee1989/businesshelperapp",
   },
   {
