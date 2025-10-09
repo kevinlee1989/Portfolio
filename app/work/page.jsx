@@ -32,7 +32,11 @@ const projects = [
       { name: "JWT authentication" },
       { name: "OpenAI API/ Fine-tuning" },
     ],
-    image: "/backend.png",
+    media: {
+      type: "video",        // "image" | "video"
+      src: "/GYB_video.mp4",  // /public 경로
+      poster: "/GYB_Main.png"
+    },
     live: "",
     github: "https://github.com/kevinlee1989/businesshelperapp",
   },
@@ -47,7 +51,11 @@ const projects = [
       { name: "AWS DynamoDB" },
       { name: "Elastic Search" },
     ],
-    image: "/backend.png",
+    media: {
+      type: "image",        // "image" | "video"
+      src: "/backend.png",  // /public 경로
+      poster: "/backend.png"
+    },
     live: "",
     github: "https://github.com/kevinlee1989/Ticket",
   },
@@ -57,7 +65,11 @@ const projects = [
     title: "project 03",
     description: "Designed and implemented a AI model using cosine similarity. Utilized TF-IDF vectorization to manage and process over vast range of movies and unique text, using scikit-learn tools.",
     stack: [{ name: "Python" }, { name: "numpy" }, { name: "Scikit-learn" }, { name: "TMBD API" },],
-    image: "/AIMoviePic.png",
+    media: {
+      type: "image",        // "image" | "video"
+      src: "/AIMoviePic.png",  // /public 경로
+      poster: "/backend.png"
+    },
     live: "",
     github: "https://github.com/kevinlee1989/AiMovieRec",
   },
@@ -67,7 +79,11 @@ const projects = [
     title: "project 04",
     description: "Led a project to develop a comprehensive web application, integrating various features including chatbot service for imporvement in UI/UX.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/frontend.png",
+    media: {
+      type: "image",        // "image" | "video"
+      src: "/frontend.png",  // /public 경로
+      poster: "/backend.png"
+    },
     live: "",
     github: "https://github.com/kevinlee1989/DrugHelpPage",
   },
@@ -77,7 +93,11 @@ const projects = [
     title: "project 05",
     description: "Integrated with MongoDB and Firebase for seamless user resgistration service. Designed a real-time chat service using WebSockets, enabling user to have real-time communication.",
     stack: [{ name: "Java" }, { name: "node.js" }, { name: "Firebase" } , { name: "Express.js" }, { name: "WebSocket" }],
-    image: "/LikeLion.png",
+    media: {
+      type: "image",        // "image" | "video"
+      src: "/LikeLion.png",  // /public 경로
+      poster: "/backend.png"
+    },
     live: "",
     github: "https://github.com/KingMedieval/Fall24LikeLion",
   },
@@ -168,22 +188,33 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      {/* image */}
-                      <div className="relative w-full h-full">
+                    <div className="relative w-full h-full">
+                      {project.media.type === "video" ? (
+                        <video
+                          className="w-full h-full object-cover"
+                          src={project.media.src}
+                          poster={project.media.poster}    // 선택
+                          muted
+                          playsInline
+                          loop
+                          autoPlay                         // 간단 버전: 항상 자동재생
+                          // controls                      // 필요하면 켜기
+                          preload="metadata"
+                        />
+                      ) : (
                         <Image
-                          src={project.image}
+                          src={project.media.src}
                           fill
                           className="object-cover"
-                          alt=""
+                          alt={project.title}
+                          priority
                         />
-                      </div>
+                      )}
                     </div>
                   </SwiperSlide>
                 );
               })}
+              
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
