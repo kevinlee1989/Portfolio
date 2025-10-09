@@ -51,6 +51,11 @@ const experience = {
   description: "My overall experience focused on learning and creating scalable, reliable, and efficient software applications for real-world.",
   items: [
     {
+      community: "The GYB",
+      position: "Full-stack Developer",
+      duration: "2025",
+    },
+    {
       community: "Reality Lab AI",
       position: "Software Developer",
       duration: "2024-2025",

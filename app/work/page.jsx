@@ -23,8 +23,23 @@ import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "back-end",
+    category: "Full-stack",
     title: "project 01",
+    description: "Developed/Built the chat system of our company's B2B web platform. Integrated React components with Firebase for real-time messaging using snapshot(), expanded the number of AI agents with fine-tuning for more specialized responses, and implemented a secure Google OAuth2 login service using Spring Security and JWT authentication.",
+    stack: [
+      { name: "React.js" },
+      { name: "Spring Security" },
+      { name: "JWT authentication" },
+      { name: "OpenAI API/ Fine-tuning" },
+    ],
+    image: "/backend.png",
+    live: "",
+    github: "https://github.com/kevinlee1989/businesshelperapp",
+  },
+  {
+    num: "02",
+    category: "back-end",
+    title: "project 02",
     description: "Developed ticket-booking back-end using DynamoDB with serverless enviornment with Lambda and API Gateway. Implemented presigned URLs enable to securely upload images directly to S3, achieving average TTFB 94.5 imporvement.",
     stack: [
       { name: "JavaScript" },
@@ -37,9 +52,9 @@ const projects = [
     github: "https://github.com/kevinlee1989/Ticket",
   },
   {
-    num: "02",
+    num: "03",
     category: "AI Implementation Web",
-    title: "project 02",
+    title: "project 03",
     description: "Designed and implemented a AI model using cosine similarity. Utilized TF-IDF vectorization to manage and process over vast range of movies and unique text, using scikit-learn tools.",
     stack: [{ name: "Python" }, { name: "numpy" }, { name: "Scikit-learn" }, { name: "TMBD API" },],
     image: "/AIMoviePic.png",
@@ -47,9 +62,9 @@ const projects = [
     github: "https://github.com/kevinlee1989/AiMovieRec",
   },
   {
-    num: "03",
+    num: "04",
     category: "frontend",
-    title: "project 03",
+    title: "project 04",
     description: "Led a project to develop a comprehensive web application, integrating various features including chatbot service for imporvement in UI/UX.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/frontend.png",
@@ -57,9 +72,9 @@ const projects = [
     github: "https://github.com/kevinlee1989/DrugHelpPage",
   },
   {
-    num: "04",
+    num: "05",
     category: "Fullstack",
-    title: "project 04",
+    title: "project 05",
     description: "Integrated with MongoDB and Firebase for seamless user resgistration service. Designed a real-time chat service using WebSockets, enabling user to have real-time communication.",
     stack: [{ name: "Java" }, { name: "node.js" }, { name: "Firebase" } , { name: "Express.js" }, { name: "WebSocket" }],
     image: "/LikeLion.png",
