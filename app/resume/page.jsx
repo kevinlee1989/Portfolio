@@ -15,7 +15,8 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 // about data
 const about = {
   title: "About me",
-  description: "I have succesfully launched serveral projects and extra activity to share my passion for software development. My goal is to create functional and scalable platforms that enhance user experiences.",
+  description:
+    "I have succesfully launched serveral projects and extra activity to share my passion for software development. My goal is to create functional and scalable platforms that enhance user experiences.",
   info: [
     {
       fieldName: "Name",
@@ -48,8 +49,14 @@ const about = {
 const experience = {
   icon: "",
   title: "My experience",
-  description: "My overall experience focused on learning and creating scalable, reliable, and efficient software applications for real-world.",
+  description:
+    "My overall experience focused on learning and creating scalable, reliable, and efficient software applications for real-world.",
   items: [
+    {
+      community: "Sports Excitement",
+      position: "Backend Developer",
+      duration: "2026-current",
+    },
     {
       community: "The GYB",
       position: "Full-stack Developer",
@@ -97,7 +104,8 @@ const experience = {
 const education = {
   icon: "",
   title: "My Education",
-  description: "I have learned and built a strong foundation in computer science and engineering with hands-on experience in various communities, institutions, and projects",
+  description:
+    "I have learned and built a strong foundation in computer science and engineering with hands-on experience in various communities, institutions, and projects",
   items: [
     {
       institution: "University of California: San Diego",
@@ -129,7 +137,8 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "I have a strong knowledge in modern web development technologies, focusing on applying them efficiently in various applications.",
+  description:
+    "I have a strong knowledge in modern web development technologies, focusing on applying them efficiently in various applications.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -309,7 +318,10 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
