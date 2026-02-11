@@ -7,7 +7,7 @@ import { FiDownload } from "react-icons/fi";
 const DownloadButton = () => {
   const handleDownload = async () => {
     try {
-      const response = await fetch("/Kevin_Lee_Resume_2026.pdf"); // 서버 PDF 경로
+      const response = await fetch("/kevin_Lee_Resume_2026.pdf"); // 서버 PDF 경로
       if (!response.ok) {
         throw new Error("Failed to fetch the CV file.");
       }
